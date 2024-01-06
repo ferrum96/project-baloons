@@ -1,0 +1,22 @@
+.composition
+	position: relative
+	&__photo
+		border-radius: .5rem
+		position: absolute
+		width: 75%
+		transition: all .3s ease
+		&:hover
+			transform: scale(1.15)
+			z-index: 2
+		&_n1
+			top: 0
+			left: 0
+		&_n2
+			top: 16.4rem
+			left: 2.2rem
+			z-index: 1
+		&_n3
+			top: 8.9rem
+			left: 22.1rem
+	&:hover &__photo:not(:hover)
+			transform: scale(0.8)

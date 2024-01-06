@@ -1,0 +1,21 @@
+.button-text
+	@include style-link($color-grey)
+	border-bottom: 1px solid $brown-color-light
+	padding: .8rem .9rem 1.5rem 1.1rem
+	letter-spacing: 2px
+	transition: all .4s ease
+	.arrow-icon
+		background: url('../src/icons/arrow-right.svg') no-repeat center center
+		background-size: contain
+		width: 1.7rem
+		height: .8rem
+		display: inline-block
+	&:hover
+		background-color: $brown-color-light
+		color: $color-white
+		transform: translateY(-.3rem)
+		box-shadow: $box-shadow-dark
+		& .arrow-icon path
+			fill: #fff
+	&:active
+		transform: translateY(0)

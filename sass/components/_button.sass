@@ -1,6 +1,7 @@
 .button
 	&:link, &:visited
 		@include style-link($color-grey)
+		text-transform: uppercase
 		position: relative
 		align-self: auto
 		background-color: $color-white
@@ -14,13 +15,13 @@
 		transition: all .3s
 	&:hover
 		transform: translateY(-.4rem)
-		box-shadow: 0 .4rem .4rem 0 rgba(0, 0, 0, .5)
+		box-shadow: $box-shadow-dark
 		&::after
 			transform: scale(1.2, 1.5)
 			opacity: 0
 	&:active
 		transform: translateY(.2rem)
-		box-shadow: 0 .4rem .4rem 0 rgba(0, 0, 0, .1)
+		box-shadow: $box-shadow-light
 	&::after
 		position: absolute
 		content: ""

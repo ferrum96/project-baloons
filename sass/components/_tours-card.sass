@@ -6,6 +6,7 @@
 	position: relative
 	&__side
 		width: 100%
+		height: 52rem
 		transition: all .8s ease-out
 		position: absolute
 		backface-visibility: hidden
@@ -18,6 +19,8 @@
 		&_back
 			background: $gradien-light-brown_dark
 			transform: rotateY(180deg)
+			padding: 10rem 0
+			color: $color-white
 	&:hover &__side_front
 		transform: rotateY(-180deg)
 	&:hover &__side_back
@@ -58,8 +61,22 @@
 			li
 				display: inline-block
 				font-weight: 700
-				line-height: normal
 				letter-spacing: .2rem
 				border-bottom: 1px solid
 				&:not(:last-child)
 					margin-bottom: 2rem
+	&__caption
+		font-size: 1.6rem
+		font-weight: 300
+		letter-spacing: .2rem
+		margin-bottom: 8.4rem
+	&__price
+		font-size: 6rem
+		font-weight: 500
+		letter-spacing: 2px
+		margin-bottom: 8.4rem
+	& .button
+		font-weight: 400
+		padding: 1.5rem 2.1rem 
+		font-size: 2rem
+		letter-spacing: .5rem

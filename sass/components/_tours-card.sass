@@ -1,0 +1,65 @@
+.tours-card
+	height: 52rem
+	width: 34rem
+	perspective: 150rem
+	-moz-perspective: 150rem
+	position: relative
+	&__side
+		width: 100%
+		transition: all .8s ease-out
+		position: absolute
+		backface-visibility: hidden
+		top: 0
+		left: 0
+		box-shadow: $box-shadow-light
+		border-radius: .3rem
+		&_front
+			background: $color-white
+		&_back
+			background: $gradien-light-brown_dark
+			transform: rotateY(180deg)
+	&:hover &__side_front
+		transform: rotateY(-180deg)
+	&:hover &__side_back
+		transform: rotateY(0)
+	&__image
+		height: 24.5rem
+		background-blend-mode: hard-light
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
+		margin-bottom: 4rem
+		border-radius: 10px 10px 0 0
+		&_1
+			background: $brown-color-light url('../src/images/tours-photo-1.jpeg') center / cover no-repeat
+		&_2
+			background: $brown-color-light url('../src/images/tours-photo-2.jpeg') center / cover no-repeat
+		&_3
+			background: $brown-color-light url('../src/images/tours-photo-3.jpeg') center / cover no-repeat
+	&__title
+		text-transform: uppercase
+		text-align: right
+		color: $color-white
+		position: absolute
+		top: 17.6rem
+		right: 0
+	&__span
+		padding: 1rem 2rem
+		background: $gradien-light-brown_dark
+		&_1
+			padding-bottom: .2rem
+		&_2
+			padding-top: .2rem
+			position: absolute
+			right: 0
+			top: 3.5rem
+	&__subtitle
+		margin-bottom: 5.5rem
+		ul
+			list-style: none
+			li
+				display: inline-block
+				font-weight: 700
+				line-height: normal
+				letter-spacing: .2rem
+				border-bottom: 1px solid
+				&:not(:last-child)
+					margin-bottom: 2rem

@@ -1,11 +1,11 @@
 .button
-	&:link, &:visited
+	&, &:link, &:visited
 		@include style-link($color-grey)
 		text-transform: uppercase
 		position: relative
 		align-self: auto
 		background-color: $color-white
-		padding: 1.5rem 4rem
+		padding: 1.5rem 2.1rem
 		border-radius: 5rem
 		font-size: 2rem
 		font-style: normal
@@ -13,6 +13,8 @@
 		line-height: normal
 		letter-spacing: .5rem
 		transition: all .3s
+		border: none
+		box-shadow: $box-shadow-light
 	&:hover
 		transform: translateY(-.4rem)
 		box-shadow: $box-shadow-dark
@@ -37,3 +39,8 @@
 	&_animated
 		animation: bottomToTop 1.3s ease-out .5s
 		animation-fill-mode: backwards
+	&_brown
+		background: $brown-color-light
+		color: $color-white
+		&::after
+			background-color: $brown-color-light

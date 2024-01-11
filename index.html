@@ -249,6 +249,46 @@
 				</div>
 			</section>
 
+			<!-- Book -->
+			<section class="book">
+				<div class="row">
+					<form class="book-form" action="">
+						<div class="book-form__container">
+							<h2 class="book-form__title title-secondary">ЗАБРОНИРОВАТЬ ТУР</h2>
+							<div class="book-form__group">
+								<input type="text" class="book-form__input book-form__input_text" placeholder="Имя Фамилия" id="name"
+									required>
+								<label for="name" class="book-form__label book-form__label_text">Ваше имя и фамилия</label>
+							</div>
+							<div class="book-form__group">
+								<input type="text" class="book-form__input book-form__input_text" placeholder="Почта" id="email"
+									pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+								<label for="email" class="book-form__label book-form__label_text">Ваш email</label>
+							</div>
+							<div class="book-form__group">
+								<div class="book-form__group_radio">
+									<input type="radio" class="book-form__input book-form__input_radio" id="group-tour" name="checked"
+										checked>
+									<label for="group-tour" class="book-form__label book-form__label_radio">
+										Групповой тур
+										<span class="book-form__button_radio"></span>
+									</label>
+								</div>
+								<div class="book-form__group_radio">
+									<input type="radio" class="book-form__input book-form__input_radio" id="person-tour" name="checked">
+									<label for="person-tour" class="book-form__label book-form__label_radio">
+										Индивидуальный тур
+										<span class="book-form__button_radio"></span>
+									</label>
+								</div>
+							</div>
+							<button class="button button_brown">забронировать</button>
+						</div>
+					</form>
+				</div>
+			</section>
+
+
 		</main>
 	</div>
 </body>

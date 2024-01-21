@@ -1,0 +1,104 @@
+.burger-menu
+	position: relative
+	&__toggle
+		display: none
+	&__toggle:checked ~ &__overlay
+		transform: scale(200)
+	&__toggle:checked ~ &__nav
+		opacity: 1
+		transform: translateX(0)
+	&__toggle:checked + &__button &__button-line
+		background: transparent
+	&__toggle:checked + &__button &__button-line::before
+		transform: rotate(135deg)
+		top: 0
+		left: 0
+	&__toggle:checked + &__button &__button-line::after
+		transform: rotate(-135deg)
+		top: 0
+		left: 0
+	&__button
+		display: inline-block
+		width: 7rem
+		height: 7rem
+		background: $color-white
+		border-radius: 50%
+		top: 10.4rem
+		right: 10.4rem
+		position: fixed
+		z-index: 5
+		box-shadow: $box-shadow-light
+		cursor: pointer
+		transition: all .4s ease
+		&:hover
+			box-shadow: $box-shadow-dark
+	&__button:hover &__button-line::before
+			top: -1.2rem
+	&__button:hover &__button-line::after
+			top: 1.4rem
+	&__button-line
+		position: relative
+		&,
+		&::after,
+		&::before
+			content: ""
+			position: absolute
+			display: inline-block
+			width: 3rem
+			height: .2rem
+			background: $color-black
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
+			transition: top .1s
+		&::before
+			top: -1rem
+		&::after
+			top: 1.2rem
+	&__overlay
+		width: 6rem
+		height: 6rem
+		background: $brown-color-light
+		border-radius: 50%
+		position: fixed
+		top: 10.8rem
+		right: 10.8rem
+		z-index: 3
+		transition: all .8s ease-in-out
+	&__nav
+		opacity: 0
+		text-align: center
+		width: 100%
+		height: 100vh
+		position: fixed
+		top: 0
+		right: 0%
+		z-index: 4
+		transform: translateX(100%)
+		transition: all 1s cubic-bezier(0.68, -0.6, 0.32, 1.6)
+	&__list
+		list-style: none
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+	&__item
+		font-weight: 300
+		letter-spacing: .5rem
+		font-size: 4rem
+		text-transform: uppercase
+		&:not(:last-child)
+			margin-bottom: 6rem
+	&__link
+		color: $color-white
+		padding: 1rem 2rem
+		&:link, &:active
+			display: inline-block
+			text-decoration: none
+			background: linear-gradient(120deg, transparent 0%, transparent 50%, rgba(255,255,255,1) 50%)
+			background-size: 240%
+			transition: all .4s ease-in-out
+		&:hover, &:active
+			background-position: 100%
+			color: $brown-color-dark
+			transform: translateX(-1rem)
